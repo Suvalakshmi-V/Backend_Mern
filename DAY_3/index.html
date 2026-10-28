@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-3</title>
+</head>
+<body>
+   <script>
+
+     const name = "Suvalakshmi"
+     const age = 22
+     const city = "Cuddalore"
+     const role = "Web Developer"
+
+     const message = `Hello ! I am ${name}.I am ${age} years old.I am from ${city}.I'm a ${role}`
+     console.log(message)                   
+
+
+     console.log("")
+     const profileInfo = {Name : "Suvalakshmi Varadharajan ", Age : 21 ,
+      City : "Chennai", Role : "Full-Stack Developer"}
+
+      const user = `Hi  Everyione ! I'm ${profileInfo.Name}.
+      I'm ${profileInfo.Age} years old. And I'm From ${profileInfo.City}.And I'm a ${profileInfo.Role} `
+
+      console.log(user);
+
+      // Calculator
+
+      console.log("")
+      console.log("Task 2 - Calcutator")
+
+      const calculator = (a,b)=>{
+         
+         console.log("Addition :",a+b)
+         console.log("Subraction :",a-b)
+         console.log("Multiplication :",a*b)
+         console.log("Division :",a/b)
+         return a+b
+      }
+      calculator(20,10)
+
+      // user greeting
+
+      console.log("")
+      console.log("Task 3 - User Greeting")
+      
+      const greetUser = (name,role = "Devaloper")=>{
+         console.log(`Hello ${name}, I'm a ${role}`)
+
+      }
+      greetUser("Suvalakshmi")
+      
+
+      // Task 4 
+
+      console.log("")
+      console.log("Task 4 -Student Profile")
+
+      
+
+          const student = {Name : "Suvalakshmi", 
+        Age : 21, City : "Cuddalore" ,
+        Course : "Full-Stack" }
+
+        const stu =(student)=>{
+
+        const {Name,Age,City,Course} = student 
+
+        console.log(`Name :${Name},
+Age : ${Age} 
+City : ${City}
+Course : ${Course}`)
+
+      }
+      stu(student)
+      
+
+      // TASK - 5
+
+      console.log("")
+      console.log("Task -5 Calculate price & quantity")
+
+      const product = {name : "Laptop",
+                       price : 60000,
+                       quantity : 2 
+      }
+
+      const infoProduct =(product)=>{
+
+         const {name,price,quantity} = product
+
+
+         const total = price * quantity 
+
+        
+
+         console.log(`${product.name}
+Price : ${product.price}
+Quantity : ${product.quantity}
+Total : ${total}`)
+
+      }
+      infoProduct(product)
+
+      // Task -6
+
+      console.log("")
+      console.log("6.Add More Product ")
+
+      const products1 = ["Laptop","Mouse"]
+      const products2 = ["Keyboard", "Monitor"];
+
+      const copy = [...products1,...products2]
+
+      console.log(copy)
+
+      // Task -7 
+      console.log("")
+      console.log("7.Copy & Update User")
+
+      const userInfo = { name : "Suvalakshmi", age :20,
+                    role : "Developer"
+      }
+   
+
+
+      const updatedUser = {...userInfo,age:22,
+         role: "Senior Developer"}
+   
+
+      console.log(`Original :
+${userInfo.name}
+${userInfo.age}
+${userInfo.role}
+
+Updated :
+${updatedUser.name}
+${updatedUser.age}
+${updatedUser.role}`)
+
+// Task -8
+
+console.log("")
+console.log("Task-8 Calculate total")
+
+const calculateTotal=(...prices)=>{
+ let total =0
+   
+for(let i=0; i<prices.length; i++){
+
+   total = total + prices[i]
+}
+console.log("Total :",total)
+
+}
+calculateTotal(100, 200, 300);
+calculateTotal(50,100)
+calculateTotal(100,200)
+
+
+
+
+
+      
+
+        
+      
+
+
+
+
+
+
+
+
+      
+   </script> 
+</body>
+</html>

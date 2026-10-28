@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY - 5</title>
+</head>
+<body>
+    <script>
+
+// Task -1 
+
+console.log("Task-1 Great than 35")
+
+const arr =[10,20,30,40]
+
+const greatThan = arr.some((arr)=>arr>35)
+console.log(greatThan)
+
+// MARK 
+
+console.log("")
+console.log("Task 2- Mark")
+
+const student =[{ Name : "Monica", Mark : 85},
+              { Name : "Thaanuja", Mark : 99},
+              {Name : "Suvalakshmi",Mark : 52},
+              {Name : "Praveen", Mark : 55}]
+
+const aboveMark = student.every((student)=>student.Mark>50)
+console.log(aboveMark)  
+
+// Task -3 
+
+console.log("")
+console.log("Task-3 Admin Exists using Incudes()")
+
+const company = ["Admin","User","Developer"]
+ 
+const same = "User"
+
+const check = company.includes(same)
+
+console.log(check)
+
+// Task-4 
+console.log("")
+console.log("Task-4 Calculate total Salary using reduce()")
+
+const employees = [{name:"Suvalakshmi", salary :300000},
+          { name : "Monica" , salary :100000},
+          {name : "Thaanuja",salary : 40000},
+          {name : "Praveen",salary : 650000},
+          {name : "Saritha",salary :55000}]
+
+   const total =employees.reduce((sum,item)=>{
+     return sum+ item.salary
+
+   },0) 
+   console.log(total)  
+
+   // Task-5 
+   console.log("")
+   console.log("Task-5 Total shopping Cart's")
+
+   const product = [{product : "Laptop",price : 10000,quantity:4},
+    {product :"Mouse",price:300,quantity:1},
+    {product :"OS",price:2000,quantity:4}]
+
+    const Total =product.reduce((acc,curr)=>{
+            return acc+curr.price*curr.quantity
+    },0)
+console.log(Total)
+
+// Task-6
+
+console.log("")
+console.log("Task-6 More than 30000 using Filter()")
+
+const employee = [{name:"Suva",salary:50000},
+    {name:"Thaanuja",salary:45000},
+    {name:"Mariya",salary:30000}]
+
+const moreThan = employee.filter((employee)=>employee.salary>30000)
+console.log(moreThan)
+
+// Task -7
+
+console.log("")
+console.log("Task-7 Find Student using find()")
+
+const students = [{ID:32,name:"Suvalakshmi"},
+    {ID:43,name:"Monica"}]
+const findStudent = students.find((students)=>students.ID===32)
+console.log(findStudent) 
+
+// Task-8
+
+console.log("")
+console.log("Task8 -findindex()")
+
+const proDucts =[{ID:11,product:"laptop"},
+{ID:12,product:"Mouse"},{ID:13,product:"System"}]
+
+const findIndex =proDucts.findIndex((proDucts)=>proDucts.ID===12)
+console.log(findIndex)
+
+// Task-9
+
+console.log("")
+console.log("Task-9 SORT")
+
+const price = [23,45,67,85,24,89,65,43,99,266]
+
+const ascending =[...price].sort((a,b)=>a-b)
+
+console.log(ascending)
+
+// Task -10
+
+console.log("")
+console.log("Task-10 Map")
+
+const employe = [{name:"Suvalakshmi"},{name:"Lakshmi"},{name:"Lakshmi",age:22},{name:"Lakshmi",age:21},{name:"Lakshmi"},{name:"Lakshmi"}]
+const names = employe.map((employe)=>employe.name)
+console.log(names)
+
+    </script>
+</body>
+</html>
