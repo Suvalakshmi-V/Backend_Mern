@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="showdata"></div>
+    <script>
+        
+    const getDatas =  async ()=>{
+        const show = document.getElementById("showdata")
+
+        try {
+
+            const getdata = await fetch("https://dummyjson.com/products/1")
+
+            if(!getdata.ok){
+                throw new Error("HTTP :"+getdata.status)
+                return
+            }
+             
+            const change = await getdata.json()
+
+            let product = change
+
+            console.log(product)
+
+            let myDatas = ""
+
+
+            product.forEach(element => {
+
+            myDatas += `<h2>Product Price : ${product.price}</h2>`
+            myDatas += `<h2>Product Category : ${product.category}</h2>`
+            myDatas += `<h2>Product Title : ${product.title}</h2>`
+
+                
+            });
+
+            show.innerHTML = myDatas
+
+        }catch(e){
+
+            console.log(e)
+
+        }
+    }
+    getDatas()
+      
+    </script>
+</body>
+</html>

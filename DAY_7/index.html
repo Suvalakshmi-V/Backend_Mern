@@ -28,16 +28,61 @@
     //     console.log("Clean")
     // })
       
-   const getData = async()=>{
-    let val = 3
+//    const getData = async()=>{
+//     let val = 3
 
-    if(val%2===0){
-        let data = "Even"
+//     if(val%2===0){
+//         let data = "Even"
+//     }else{
+//         console.log("Odd")
+//     }
+//    }
+//    getData()
+
+console.log("                      DAY-7 TASK               ")
+
+console.log("1.Pass or Fail")
+
+const student = new Promise((resolve,reject)=>{
+
+    let mark = 40
+
+    if(mark>=35){
+        resolve("Student PASSED")
     }else{
-        console.log("Odd")
+        reject ("Student Failed")
     }
-   }
-   getData()
+})
+student.then((result)=>{
+    console.log(result)
+}).catch((error)=>{
+
+    console.log(error)
+}).finally(()=>{
+    console.log("clean")
+});
+
+// Task -2
+
+console.log("")
+console.log("Task-2 Login Validation")
+
+const loginVali = new Promise((resolve,reject)=>{
+    let Username = "Admin"
+    let Password = "12345"
+    if( Username ==="Admin" && Password === "12345"){
+        resolve ("Login Succeessful")
+    }else{
+        reject ("Invalid Credentials")
+    }
+})
+.then((result)=>{
+    console.log(result)
+}).catch((error)=>{
+    console.log(error)
+})
+
+
 
     </script>
 </body>
